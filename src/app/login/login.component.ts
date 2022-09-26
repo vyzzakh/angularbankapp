@@ -24,9 +24,36 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  login() {
-    var acno = this.acno
-    var psd = this.psd
+  // login() {
+  //   var acno = this.acno
+  //   var psd = this.psd
+  //   let userDetails = this.userDetails
+  //   if (acno in userDetails) {
+  //     if (psd == userDetails[acno]['password']){
+
+      
+  //     alert('login success')
+  //   }
+  //   else{
+  //     alert("incorrect password")
+  //   }
+  // }
+    
+    
+  //   else {
+  //     alert("user not exist or incorrect ac number")
+  //   }
+  //   alert("login clicked")
+  // }
+
+
+  login(a:any,b:any) {
+    // console.log();
+    // console.log();
+    
+    
+    var acno = a.value
+    var psd = b.value
     let userDetails = this.userDetails
     if (acno in userDetails) {
       if (psd == userDetails[acno]['password']){
@@ -43,19 +70,8 @@ export class LoginComponent implements OnInit {
     else {
       alert("user not exist or incorrect ac number")
     }
-    alert("login clicked")
-  }
-  acchange(event: any) {
-    this.acno = event.target.value
-    console.log(this.acno);
-
-
+   
   }
 
-  pschange(event: any) {
-    this.psd = event.target.value
-    console.log(this.psd);
-
-
-  }
+  
 }
